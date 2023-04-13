@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto sans", sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav li {
+    display: inline;
+    margin: 8px;
+}
+
+header nav li a, h1 {
+    text-decoration: none;
+    color: #fff;
+}
+
+header {
+    padding: 16px 0;
+    background-color: steelblue;
+}
+
+.grid-about {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 32px;
+}
+
+.grid-about {
+    display: flex;
+}
+
+.grid-about img {
+    width: 520px;
+}
+
+section {
+    margin: 32px;
+}
+
+h2 {
+    margin-bottom: 18px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 24.5%);
+    row-gap: 14px;
+    left: 20px;
+}
+
+.products .flex {
+    display: flex;
+    justify-content: center;
+}
+
+.products h3 {
+    margin-top: 8px;
+}
+
+.products p {
+    margin: 4px;
+}
+
+.products button {
+    background-color:forestgreen;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 215px;
+    padding: 8px;
+    right: 5px;
+}
+
+.products button:hover {
+    background-color: rgb(47, 168, 47);
+}
+
+.products img {
+    width: 215px;
+    height: 215px
+}
+
+@media screen and (max-width: 640px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .grid-about {
+        display: block;
+    }
+    
+    .grid-about img {
+       max-width: 320px;
+       width: 100%;
+    }
+
+    .grid-about h2 {
+        margin-top: 8px;
+    }
+
+    .grid-about p, .grid-about h2 {
+        margin-left: 0;
+    }
+
+    .products {
+        display: block;
+    }
+
+    .products img {
+        max-width: 250px;
+        width: 100%;
+    }
+
+    .products button {
+        margin: 8px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    header {
+       padding: 32px;
+    }
+
+    .grid-about {
+        display: block;
+    }
+
+   .grid-about img {
+    width: 100%;
+   }
+    
+    .products {
+        grid-template-columns: repeat(2, 49%);
+        column-gap: 8px;
+    }
+
+    .products img {
+        width: 90%;
+    }
+
+    .products button {
+        margin-bottom: 14px;
+        width: 215px;
+    }
+}
